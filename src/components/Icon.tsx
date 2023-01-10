@@ -14,7 +14,7 @@ export const Icon: React.FC<IconProps> = ({
   onClickEvent,
 }) => {
   const iconStyle = {
-    "-webkit-mask": "url(/icons/" + iconName + ".svg) center center no-repeat",
+    WebkitMask: "url(/icons/" + iconName + ".svg) center center no-repeat",
     width: size + "px",
     height: size + "px",
     background: color,
