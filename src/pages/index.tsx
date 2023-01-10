@@ -11,12 +11,7 @@ export default function Home() {
   const titleWrapper = createRef<HTMLDivElement>();
 
   useEffect(() => {
-    let n: number;
-    if (window.innerWidth > 1000) {
-      n = 1.8;
-    } else {
-      n = 1.2;
-    }
+    const n = window.innerWidth > 1000 ? 1.8 : 1.1;
     // camera
     const camera = new THREE.OrthographicCamera(
       window.innerWidth / -n,

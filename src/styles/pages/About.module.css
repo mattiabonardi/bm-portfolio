@@ -1,0 +1,164 @@
+.backContainer {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(0, 0, 71, 1) 0%,
+    rgba(0, 0, 48, 1) 32%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 71, 1) 0%,
+    rgba(0, 0, 48, 1) 32%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(0, 0, 71, 1) 0%,
+    rgba(0, 0, 48, 1) 32%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(0, 0, 71, 1) 0%,
+    rgba(0, 0, 48, 1) 32%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 71, 1) 0%,
+    rgba(0, 0, 48, 1) 32%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.container {
+  width: 100%;
+  padding: 0px 35px 0px;
+}
+
+.profileImageWrapper {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 116px);
+  width: 100%;
+  flex-direction: column;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+  -ms-animation: fadein 3s; /* Internet Explorer */
+  -o-animation: fadein 3s; /* Opera < 12.1 */
+  animation: fadein 3s;
+  font-style: italic;
+}
+
+.profileImage {
+  max-width: 100%;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  font-size: 24px;
+}
+
+.sectionTitle {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-size: 35px;
+}
+
+.skillWrapper {
+  width: 30px;
+  height: auto;
+}
+
+.skillsWrapper {
+  width: 80%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.experienceWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.experienceElement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.experienceElementDescription {
+  text-align: left;
+  width: 75%;
+}
+
+.experienceElementDaterange {
+  text-align: right;
+}
+
+.contactTitle {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  text-align: left;
+  font-size: 35px;
+}
+
+.contactMail {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  text-align: right;
+  font-size: 20px;
+}
+
+.mailLink {
+  cursor: pointer;
+}
+
+/** Desktop */
+@media screen and (min-width: 992px) {
+  .container {
+    padding: 0 250px 0;
+  }
+
+  .profileImageWrapper {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .presentation {
+    font-size: 36px;
+  }
+
+  .sectionTitle {
+    font-size: 60px;
+  }
+
+  .experienceElement {
+    font-size: 18px;
+  }
+}
