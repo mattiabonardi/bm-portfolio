@@ -7,17 +7,13 @@ interface IconProps {
   onClickEvent?: () => void;
 }
 
-export const Icon: React.FC<IconProps> = ({
-  iconName,
-  size = "16",
-  color = "#E8EAED",
-  onClickEvent,
-}) => {
+export const Icon: React.FC<IconProps> = (props) => {
   const iconStyle = {
-    WebkitMask: "url(/icons/" + iconName + ".svg) center center no-repeat",
-    width: size + "px",
-    height: size + "px",
-    background: color,
+    WebkitMask:
+      "url(/icons/" + props.iconName + ".svg) center center no-repeat",
+    width: (props.size ? props.size : "16") + "px",
+    height: (props.size ? props.size : "16") + "px",
+    background: props.color ? props.color : "#E8EAED",
   };
-  return <div style={iconStyle} onClick={onClickEvent}></div>;
+  return <div style={iconStyle} onClick={props.onClickEvent}></div>;
 };
