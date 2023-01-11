@@ -21,7 +21,7 @@ export default function Home() {
       -50000,
       50000
     );
-    camera.position.set(40.96, 1.22, 100);
+    camera.position.set(0, 1, 100);
     camera.quaternion.setFromEuler(new THREE.Euler(0, 0, 0));
 
     // scene
