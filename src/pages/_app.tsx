@@ -1,8 +1,22 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { printToConsole, printToDOMasComment } from "bm-signature";
+import { createRef, useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const signature = createRef<HTMLDivElement>();
+  useEffect(() => {
+    // print signature to console
+    printToConsole();
+    if (signature.current) {
+      // print signature to DOM as comment
+      printToDOMasComment(signature.current);
+    }
+  }, []);
   return (
-    <Component {...pageProps} />
+    <>
+      <div ref={signature}></div>
+      <Component {...pageProps} />
+    </>
   );
 }
