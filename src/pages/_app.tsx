@@ -5,9 +5,9 @@ import { createRef, useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const signature = createRef<HTMLDivElement>();
+  // print signature to console
+  printToConsole();
   useEffect(() => {
-    // print signature to console
-    printToConsole();
     if (signature.current) {
       // print signature to DOM as comment
       printToDOMasComment(signature.current);

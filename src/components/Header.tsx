@@ -29,7 +29,6 @@ export const Header: React.FC = () => {
           iconName={active ? "close" : "menu"}
           size="40"
           onClickEvent={() => {
-            console.log("event", active);
             setActive(!active);
           }}
         ></Icon>
