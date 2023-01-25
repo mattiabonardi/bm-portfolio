@@ -47,7 +47,7 @@ export const workData: WorkData[] = [
     id: "smeup-nc",
     title: "Smeup No Code",
     abstract:
-      "Smeup NC is a Figma plugin which allows to generate Smeup UI DSL from Figma design file. The plugin is provided with Smeup Figma components library. Users can create interface mockups and in the end exports the relative DSL.",
+      "No Code integration for Smeup UI",
     links: [
       {
         icon: "info",
@@ -60,13 +60,13 @@ export const workData: WorkData[] = [
         newWindow: true,
       },
     ],
-    mainTecnologies: ["typescript", "react", "vite"],
+    mainTecnologies: ["typescript", "react", "figma"],
     content: {
-      intro: "",
-      architecture: "",
-      goal: "",
-      problems: "",
-      tecnologies: [],
+      intro: "Smeup NC is a Figma plugin which allows to generate Smeup UI DSL from Figma design file. The plugin is provided with Smeup Figma components library. Users can create mockups of Smeup ERP and in the end they can export the relative DSL.",
+      architecture: "The plugin consists of two projects: smeup-nc-core and smeup-nc-ui. The first converts Figma components into SCP_SCH (Smeup UI DSL) and the second is the plugin UI. Plugin UI retrieves the page layout and call the core to get the relative DSL converted.",
+      goal: "No code platforms are very powerful for non-technical professionals because they abstract the complexity. Smeup S.p.A has a dedicated application consultancy lob which has no technical figures. For Smeup consultants using a no-code platform is very useful. The personal goals of the project are increase my skills around event-driven programming, React.js and Node.js.",
+      problems: "The main problem I faced was converting from widget absolute layout to a special layout definiton in Smeup DSL based on based on row and column divisions (similar to Bootstrap).",
+      tecnologies: ["typescript", "react", "figma", "vite", "css", "html"],
     },
   },
 ];
