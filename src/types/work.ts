@@ -8,6 +8,5 @@ export interface WorkData {
 
 export interface WorkLink {
   icon: "github" | "demo" | "info";
-  url: string;
-  newWindow: boolean;
+  onClick: () => void;
 }

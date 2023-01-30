@@ -58,13 +58,12 @@
 .title {
   font-family: "Lato", sans-serif;
   font-size: 35px;
+  margin-block-start: 0;
 }
 
 .abstract {
   font-size: 16px;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .tecnologies {
@@ -75,13 +74,33 @@
 
 .links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
 }
 
 /** Desktop */
 @media screen and (min-width: 992px) {
   .container {
-    padding: 0 250px 0;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .section {
+    width: 25%;
+    height: 60vh;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
+  }
+
+  .abstract {
+    height: 10vh;
   }
 }

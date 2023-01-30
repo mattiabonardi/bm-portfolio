@@ -47,11 +47,7 @@ export const WorkSummary: React.FC<WorkData> = (props) => {
               key={index}
               iconName={link.icon}
               size="25"
-              onClickEvent={
-                link.newWindow
-                  ? () => window.open(link.url, "_blank")
-                  : () => router.push(link.url)
-              }
+              onClickEvent={link.onClick}
             ></Icon>
           );
         })}

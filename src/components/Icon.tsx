@@ -14,6 +14,7 @@ export const Icon: React.FC<IconProps> = (props) => {
     width: (props.size ? props.size : "16") + "px",
     height: (props.size ? props.size : "16") + "px",
     background: props.color ? props.color : "#E8EAED",
+    cursor: props.onClickEvent ? "pointer" : "auto"
   };
   return <div style={iconStyle} onClick={props.onClickEvent}></div>;
 };
