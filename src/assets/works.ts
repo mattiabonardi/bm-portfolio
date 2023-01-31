@@ -65,4 +65,20 @@ export const workData: WorkData[] = [
     ],
     mainTecnologies: ["typescript", "node", "html"],
   },
+  {
+    id: "bm-wiki",
+    title: "BM Wiki",
+    abstract: "Markdown-based personal Wiki",
+    links: [
+      {
+        icon: "github",
+        onClick: () => openLink("https://github.com/requarks/wiki", true),
+      },
+      {
+        icon: "info",
+        onClick: () => openLink("http://localhost:8082/en/", true),
+      },
+    ],
+    mainTecnologies: ["wikijs", "docker", "md"],
+  },
 ];

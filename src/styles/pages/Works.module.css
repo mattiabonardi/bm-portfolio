@@ -81,16 +81,17 @@
 /** Desktop */
 @media screen and (min-width: 992px) {
   .container {
+    width: 100%;
     padding-left: 250px;
     padding-right: 250px;
     padding-top: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 30px;
   }
 
   .section {
-    width: 25%;
     height: 60vh;
     padding: 30px;
     background: rgba(255, 255, 255, 0.09);
