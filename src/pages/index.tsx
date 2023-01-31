@@ -1,4 +1,3 @@
-import { Header } from "../components/Header";
 import { Icon } from "../components/Icon";
 import styles from "../styles/pages/Index.module.css";
 import { createRef, useEffect } from "react";
@@ -76,7 +75,7 @@ export default function Home() {
 
   return (
     <>
-      <Header></Header>
+      
       <div ref={pc} className={styles.threeContainer}></div>
       <div ref={titleWrapper} className={styles.titleWrapper}>
         <h2 className={styles.subtitle}>I'm Mattia, a full stack</h2>

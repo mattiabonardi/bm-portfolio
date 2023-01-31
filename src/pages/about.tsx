@@ -1,11 +1,9 @@
-import { Header } from "../components/Header";
 import styles from "../styles/pages/About.module.css";
 import Image from 'next/image'
 
 export default function About() {
   return (
     <>
-      <Header></Header>
       <div className={styles.backContainer}></div>
       <div className={styles.container}>
         <div className={styles.profileImageWrapper}>

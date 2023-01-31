@@ -1,4 +1,3 @@
-import { Header } from "../components/Header";
 import styles from "../styles/pages/Works.module.css";
 import Image from "next/image";
 import { Icon } from "../components/Icon";
@@ -9,7 +8,6 @@ import { useRouter } from "next/router";
 export default function Works() {
   return (
     <>
-      <Header></Header>
       <div className={styles.backContainer}></div>
       <div className={styles.container}>
         {workData.map((e, index) => {

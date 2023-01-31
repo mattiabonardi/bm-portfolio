@@ -2,9 +2,13 @@ import styles from "../styles/components/Header.module.css";
 import React, { useState } from "react";
 import Link from "next/link";
 import { Icon } from "./Icon";
+import { useRouter } from "next/router";
 
 export const Header: React.FC = () => {
   const [active, setActive] = useState(false);
+ const {pathname} = useRouter();
+
+ const activeLinkClasses = [styles.selected, styles.menuItem].join(" ");
 
   return (
     <header className={styles.header}>
@@ -14,13 +18,13 @@ export const Header: React.FC = () => {
         </Link>
       </div>
       <nav className={active ? styles.menu + " " + styles.active : styles.menu}>
-        <Link className={styles.menuItem} href="/">
+        <Link className={pathname == "/" ? activeLinkClasses : styles.menuItem} href="/">
           HOME
         </Link>
-        <Link className={styles.menuItem} href="/about">
+        <Link className={pathname == "/about" ? activeLinkClasses : styles.menuItem} href="/about">
           ABOUT
         </Link>
-        <Link className={styles.menuItem} href="/works">
+        <Link className={pathname == "/works" ? activeLinkClasses : styles.menuItem} href="/works">
           WORKS
         </Link>
       </nav>
