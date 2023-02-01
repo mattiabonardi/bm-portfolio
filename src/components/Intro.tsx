@@ -1,18 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useIntroContext } from "../context/intro";
 import styles from "../styles/components/Intro.module.css";
 
-interface IntroProps {}
-
-export const Intro: React.FC<IntroProps> = () => {
-  const [display, setDisplay] = useState<boolean>(true);
+export const Intro: React.FC = () => {
+  const { introAlreadyLoaded, setIntroAlreadyLoaded } = useIntroContext();
 
   useEffect(() => {
     setTimeout(() => {
-      //setDisplay(false);
-    }, 5000);
+      setIntroAlreadyLoaded(true);
+    }, 4500);
   }, []);
 
-  if (display) {
+  if (!introAlreadyLoaded) {
     return (
       <>
         <div className={styles.wrapper}>

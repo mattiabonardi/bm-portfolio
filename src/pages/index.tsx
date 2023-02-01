@@ -6,7 +6,11 @@ import SplineLoader from "@splinetool/loader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Intro } from "../components/Intro";
 
-export default function Home() {
+interface HomeProps {
+  introAlreadyLoaded: boolean;
+}
+
+export default function Home(props: HomeProps) {
   const pc = createRef<HTMLDivElement>();
   const titleWrapper = createRef<HTMLDivElement>();
 
