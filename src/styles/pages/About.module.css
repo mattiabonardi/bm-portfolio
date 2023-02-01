@@ -48,7 +48,7 @@
 .profileImageWrapper {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 116px);
+  height: calc(100vh - 120px);
   width: 100%;
   flex-direction: column;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */

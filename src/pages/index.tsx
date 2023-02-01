@@ -1,9 +1,10 @@
 import { Icon } from "../components/Icon";
 import styles from "../styles/pages/Index.module.css";
-import { createRef, useEffect } from "react";
+import { createRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import SplineLoader from "@splinetool/loader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Intro } from "../components/Intro";
 
 export default function Home() {
   const pc = createRef<HTMLDivElement>();
@@ -56,6 +57,7 @@ export default function Home() {
     controls.dampingFactor = 0.125;
     controls.rotateSpeed = 0.4;
     controls.panSpeed = 0.4;
+    controls.autoRotate = true;
 
     window.addEventListener("resize", onWindowResize);
     function onWindowResize() {
@@ -75,7 +77,7 @@ export default function Home() {
 
   return (
     <>
-      
+      <Intro></Intro>
       <div ref={pc} className={styles.threeContainer}></div>
       <div ref={titleWrapper} className={styles.titleWrapper}>
         <h2 className={styles.subtitle}>I'm Mattia, a full stack</h2>
