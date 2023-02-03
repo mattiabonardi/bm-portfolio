@@ -3,26 +3,41 @@ import Image from "next/image";
 import { Icon } from "../components/Icon";
 import { WorkData } from "../types/work";
 import { workData } from "../assets/works";
-import { useRouter } from "next/router";
 
 export default function Works() {
+  let delay = 500;
+
   return (
     <>
       <div className={styles.backContainer}></div>
       <div className={styles.container}>
-        {workData.map((e, index) => {
-          return <WorkSummary key={index} {...e} />;
+        {workData.map((e: WorkData, index) => {
+          const workSummaryProps = {
+            ...e,
+            delay,
+          };
+          delay += 100;
+          return <WorkSummary key={index} {...workSummaryProps} />;
         })}
       </div>
     </>
   );
 }
 
-export const WorkSummary: React.FC<WorkData> = (props) => {
-  const router = useRouter();
+interface WorkSummaryProps extends WorkData {
+  delay: number;
+}
 
+export const WorkSummary: React.FC<WorkSummaryProps> = (props) => {
   return (
-    <div className={styles.section}>
+    <div
+      className={styles.section}
+      style={{
+        animation: "fadein 1s forwards " + props.delay + "ms",
+        WebkitAnimation: "fadein 1s forwards " + props.delay + "ms",
+        MozAnimation: "fadein 1s forwards " + props.delay + "ms"
+      }}
+    >
       <h2 className={styles.title}>{props.title}</h2>
       <div className={styles.tecnologies}>
         {props.mainTecnologies.map((t, index) => {
