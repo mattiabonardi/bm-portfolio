@@ -1,15 +1,12 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { printToConsole, printToDOMasComment } from "bm-signature";
-import { createRef, useEffect, useState } from "react";
+import { printToDOMasComment } from "bm-signature";
+import { createRef, useEffect } from "react";
 import { Header } from "../components/Header";
 import { IntroContextProvider } from "../context/intro";
 
 export default function App({ Component, pageProps }: AppProps) {
   const signature = createRef<HTMLDivElement>();
-  const [introAlreadyLoaded, setIntroAlreadyLoaded] = useState(false);
-  // print signature to console
-  printToConsole();
   useEffect(() => {
     if (signature.current) {
       // print signature to DOM as comment
