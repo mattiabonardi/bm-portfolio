@@ -142,7 +142,6 @@ const Skills = () => {
     "redis",
     "mongo",
     "mysql",
-    "firebase",
     "as400",
   ];
   const frontend = ["react", "vue", "vite", "wikijs", "electron", "three"];
@@ -150,6 +149,7 @@ const Skills = () => {
     "aws",
     "docker",
     "heroku",
+    "git",
     "raspberry",
     "opensuse",
     "ubuntu",

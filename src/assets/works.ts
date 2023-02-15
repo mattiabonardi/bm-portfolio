@@ -82,4 +82,26 @@ export const workData: WorkData[] = [
     ],
     mainTecnologies: ["wikijs", "docker", "md"],
   },
+  {
+    id: "bm-cluster",
+    title: "BM Cluster",
+    abstract:
+      "IaaS-based project whose role is to manage the deployment of my applications",
+    links: [
+      {
+        icon: "github",
+        onClick: () =>
+          openLink("https://github.com/mattiabonardi/bm-cluster", true),
+      },
+      {
+        icon: "info",
+        onClick: () =>
+          openLink(
+            "https://wiki.mattiabonardi.com/en/projects/bm-cluster",
+            true
+          ),
+      },
+    ],
+    mainTecnologies: ["bash", "docker", "git"],
+  },
 ];
