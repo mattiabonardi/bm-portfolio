@@ -44,7 +44,7 @@ export const workData: WorkData[] = [
   {
     id: "bm-signature",
     title: "BM Signature",
-    abstract: "Personal signature for Node.js based projects",
+    abstract: "Personal in-code signature for Node.js based projects",
     links: [
       {
         icon: "github",
