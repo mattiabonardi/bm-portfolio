@@ -6,9 +6,15 @@ import { useRouter } from "next/router";
 
 export const Header: React.FC = () => {
   const [active, setActive] = useState(false);
- const {pathname} = useRouter();
+  const { pathname, push } = useRouter();
 
- const activeLinkClasses = [styles.selected, styles.menuItem].join(" ");
+  const activeLinkClasses = [styles.selected, styles.menuItem].join(" ");
+
+  const changePage = (path: string) => {
+    push(path).then(() => {
+      setActive(!active);
+    });
+  };
 
   return (
     <header className={styles.header}>
@@ -18,15 +24,24 @@ export const Header: React.FC = () => {
         </Link>
       </div>
       <nav className={active ? styles.menu + " " + styles.active : styles.menu}>
-        <Link className={pathname == "/" ? activeLinkClasses : styles.menuItem} href="/">
+        <a
+          className={pathname == "/" ? activeLinkClasses : styles.menuItem}
+          onClick={() => changePage("/")}
+        >
           HOME
-        </Link>
-        <Link className={pathname == "/about" ? activeLinkClasses : styles.menuItem} href="/about">
+        </a>
+        <a
+          className={pathname == "/about" ? activeLinkClasses : styles.menuItem}
+          onClick={() => changePage("/about")}
+        >
           ABOUT
-        </Link>
-        <Link className={pathname == "/works" ? activeLinkClasses : styles.menuItem} href="/works">
+        </a>
+        <a
+          className={pathname == "/works" ? activeLinkClasses : styles.menuItem}
+          onClick={() => changePage("/works")}
+        >
           WORKS
-        </Link>
+        </a>
       </nav>
       <div className={styles.menuButton}>
         <Icon

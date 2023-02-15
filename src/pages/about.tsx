@@ -1,5 +1,5 @@
 import styles from "../styles/pages/About.module.css";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -53,13 +53,22 @@ export default function About() {
 const Experience = () => {
   const experienceData = [
     {
-      company: "Smeup Lab",
+      company: "Smeup LAB",
       role: "Full Stack Developer",
       description:
-        "Modernization, backend development, frontend development, deployment",
+        'Product Owner of "Kokos", a  backend runtime based on micro-interpreters',
+      period: {
+        from: "2022/05",
+        to: "current",
+      },
+    },
+    {
+      company: "Smeup LAB",
+      role: "Full Stack Developer",
+      description: "backend, frontend, devops",
       period: {
         from: "2020/12",
-        to: "current",
+        to: "2022/05",
       },
     },
     {
@@ -112,23 +121,57 @@ const Experience = () => {
 };
 
 const Skills = () => {
-  const languages = ["typescript", "go", "javascript", "java", "c++", "sql", "php", "css", "html"];
-  const backend = ["node", "gin", "vertx", "express", "cobra", "spring", "redis", "mongo", "mysql", "firebase", "as400"];
+  const languages = [
+    "typescript",
+    "go",
+    "javascript",
+    "java",
+    "c++",
+    "sql",
+    "php",
+    "css",
+    "html",
+  ];
+  const backend = [
+    "node",
+    "gin",
+    "vertx",
+    "express",
+    "cobra",
+    "spring",
+    "redis",
+    "mongo",
+    "mysql",
+    "firebase",
+    "as400",
+  ];
   const frontend = ["react", "vue", "vite", "wikijs", "electron", "three"];
-  const deployments = ["aws", "docker", "heroku", "raspberry", "opensuse", "ubuntu", "nginx", "vmware"]
+  const deployments = [
+    "aws",
+    "docker",
+    "heroku",
+    "raspberry",
+    "opensuse",
+    "ubuntu",
+    "nginx",
+    "vmware",
+  ];
 
   const skills = languages.concat(backend, frontend, deployments);
 
   return (
     <div className={styles.skillsWrapper}>
-      {
-        skills.map((element, index) => {
-          return (
-              <Image key={index} alt={element} src={"/icons/" + element + ".svg"} width="50" height="50"/>
-          )
-        })
-      }
+      {skills.map((element, index) => {
+        return (
+          <Image
+            key={index}
+            alt={element}
+            src={"/icons/" + element + ".svg"}
+            width="50"
+            height="50"
+          />
+        );
+      })}
     </div>
-  )
-
-}
+  );
+};

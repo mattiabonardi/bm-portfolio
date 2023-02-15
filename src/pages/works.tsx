@@ -35,7 +35,7 @@ export const WorkSummary: React.FC<WorkSummaryProps> = (props) => {
       style={{
         animation: "fadein 1s forwards " + props.delay + "ms",
         WebkitAnimation: "fadein 1s forwards " + props.delay + "ms",
-        MozAnimation: "fadein 1s forwards " + props.delay + "ms"
+        MozAnimation: "fadein 1s forwards " + props.delay + "ms",
       }}
     >
       <h2 className={styles.title}>{props.title}</h2>

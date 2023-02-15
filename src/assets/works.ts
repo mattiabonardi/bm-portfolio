@@ -16,12 +16,14 @@ export const workData: WorkData[] = [
       {
         icon: "info",
         onClick: () =>
-          openLink("http://localhost:8082/en/projects/tic-tac-toe-3d", true),
+          openLink(
+            "https://wiki.mattiabonardi.com/en/projects/tic-tac-toe-3d",
+            true
+          ),
       },
       {
         icon: "demo",
-        onClick: () =>
-          openLink("https://mattiabonardi.cloud/tictactoe-ddd/", true),
+        onClick: () => openLink("https://tictactoe.mattiabonardi.com", true),
       },
     ],
     mainTecnologies: ["typescript", "react", "three"],
@@ -34,11 +36,7 @@ export const workData: WorkData[] = [
       {
         icon: "info",
         onClick: () =>
-          openLink("http://localhost:8082/en/projects/smeup-nc", true),
-      },
-      {
-        icon: "demo",
-        onClick: () => openLink("https://mattiabonardi.cloud/smeup-nc", true),
+          openLink("https://wiki.mattiabonardi.com/en/projects/smeup-nc", true),
       },
     ],
     mainTecnologies: ["typescript", "react", "figma"],
@@ -56,7 +54,10 @@ export const workData: WorkData[] = [
       {
         icon: "info",
         onClick: () =>
-          openLink("http://localhost:8082/en/projects/bm-signature", true),
+          openLink(
+            "https://wiki.mattiabonardi.com/en/projects/bm-signature",
+            true
+          ),
       },
       {
         icon: "demo",
@@ -76,7 +77,7 @@ export const workData: WorkData[] = [
       },
       {
         icon: "info",
-        onClick: () => openLink("http://localhost:8082/en/", true),
+        onClick: () => openLink("https://wiki.mattiabonardi.com", true),
       },
     ],
     mainTecnologies: ["wikijs", "docker", "md"],
