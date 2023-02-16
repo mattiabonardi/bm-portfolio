@@ -26,7 +26,7 @@ export const workData: WorkData[] = [
         onClick: () => openLink("https://tictactoe.mattiabonardi.com", true),
       },
     ],
-    mainTecnologies: ["typescript", "react", "three"],
+    mainTecnologies: ["typescript", "nextjs", "three"],
   },
   {
     id: "smeup-nc",

@@ -144,14 +144,13 @@ const Skills = () => {
     "mysql",
     "as400",
   ];
-  const frontend = ["react", "vue", "vite", "wikijs", "electron", "three"];
+  const frontend = ["react", "vue", "vite", "wikijs", "electron", "three", "nextjs"];
   const deployments = [
     "aws",
     "docker",
     "heroku",
     "git",
     "raspberry",
-    "opensuse",
     "ubuntu",
     "nginx",
     "vmware",
