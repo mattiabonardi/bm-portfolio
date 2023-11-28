@@ -17,14 +17,10 @@ export const workData: WorkData[] = [
         icon: "info",
         onClick: () =>
           openLink(
-            "https://wiki.mattiabonardi.com/en/projects/tic-tac-toe-3d",
+            "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/tictactoe/README.md",
             true
           ),
-      },
-      {
-        icon: "demo",
-        onClick: () => openLink("https://tictactoe.mattiabonardi.com", true),
-      },
+      }
     ],
     mainTecnologies: ["typescript", "nextjs", "three"],
   },
@@ -36,7 +32,7 @@ export const workData: WorkData[] = [
       {
         icon: "info",
         onClick: () =>
-          openLink("https://wiki.mattiabonardi.com/en/projects/smeup-nc", true),
+          openLink("https://github.com/mattiabonardi/bm-wiki/blob/main/projects/smeup-nc/README.md", true),
       },
     ],
     mainTecnologies: ["typescript", "react", "figma"],
@@ -55,7 +51,7 @@ export const workData: WorkData[] = [
         icon: "info",
         onClick: () =>
           openLink(
-            "https://wiki.mattiabonardi.com/en/projects/bm-signature",
+            "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/bm-signature/README.md",
             true
           ),
       },
@@ -65,22 +61,6 @@ export const workData: WorkData[] = [
       },
     ],
     mainTecnologies: ["typescript", "node", "html"],
-  },
-  {
-    id: "bm-wiki",
-    title: "BM Wiki",
-    abstract: "Markdown-based personal Wiki",
-    links: [
-      {
-        icon: "github",
-        onClick: () => openLink("https://github.com/requarks/wiki", true),
-      },
-      {
-        icon: "info",
-        onClick: () => openLink("https://wiki.mattiabonardi.com", true),
-      },
-    ],
-    mainTecnologies: ["wikijs", "docker", "md"],
   },
   {
     id: "bm-cluster",
@@ -97,7 +77,7 @@ export const workData: WorkData[] = [
         icon: "info",
         onClick: () =>
           openLink(
-            "https://wiki.mattiabonardi.com/en/projects/bm-cluster",
+            "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/bm-cluster/README.md",
             true
           ),
       },
