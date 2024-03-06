@@ -3,6 +3,22 @@ import { openAlert, openLink } from "../utils/eventHelper";
 
 export const workData: WorkData[] = [
   {
+    id: "qasper",
+    title: "Qasper",
+    abstract: "Qasper is a SaaS application for Software QA.",
+    links: [
+      {
+        icon: "info",
+        onClick: () =>
+          openLink(
+            "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/qasper/README.md",
+            true
+          ),
+      },
+    ],
+    mainTecnologies: ["nginx", "react", "gin"],
+  },
+  {
     id: "tictactoe-3d",
     title: "Tic Tac Toe 3D",
     abstract:
@@ -20,7 +36,7 @@ export const workData: WorkData[] = [
             "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/tictactoe/README.md",
             true
           ),
-      }
+      },
     ],
     mainTecnologies: ["typescript", "nextjs", "three"],
   },
@@ -32,7 +48,10 @@ export const workData: WorkData[] = [
       {
         icon: "info",
         onClick: () =>
-          openLink("https://github.com/mattiabonardi/bm-wiki/blob/main/projects/smeup-nc/README.md", true),
+          openLink(
+            "https://github.com/mattiabonardi/bm-wiki/blob/main/projects/smeup-nc/README.md",
+            true
+          ),
       },
     ],
     mainTecnologies: ["typescript", "react", "figma"],
